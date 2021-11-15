@@ -1,0 +1,121 @@
+@import "../vars";
+@import "../mixins";
+
+.cars {
+  h2 {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .cars__wrapper {
+    .cars__card {
+      margin-bottom: 75px;
+      padding: 70px 0;
+      position: relative;
+
+      &:nth-child(odd) {
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          width: 72.7%;
+          height: 100%;
+          background: url("../img/car-logo-left.png") no-repeat left top, #fff;
+        }
+      }
+
+      &:nth-child(even) {
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          right: 0;
+          width: 72.7%;
+          height: 100%;
+          background: url("../img/car-logo-right.png") no-repeat right top, #fff;
+        }
+
+        .card__wrapper {
+          flex-direction: row-reverse;
+
+          .card__text {
+            margin: 0 0 0 85px;
+          }
+        }
+      }
+
+      .card__wrapper {
+        display: flex;
+
+        .card__text {
+          flex: 0 0 480px;
+          margin: 0 85px 0 0;
+
+          h3 {
+            margin-bottom: 20px;
+          }
+
+          p {
+            margin-bottom: 20px;
+          }
+
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+
+            li {
+              p {
+                font-size: 22px;
+                line-height: 31px;
+                font-weight: 700;
+                margin-bottom: 5px;
+                color: #4A4A49;
+              }
+
+              span {
+                color: #C4C4C4;
+                font-size: 14px;
+              }
+            }
+          }
+
+          div {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+              &.btn {
+                @include btn();
+              }
+
+              &.btn-tag {
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                text-decoration: none;
+                color: #0462AF;
+                border-bottom: 2px solid #0462AF;
+              }
+            }
+          }
+        }
+
+        .card__img {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

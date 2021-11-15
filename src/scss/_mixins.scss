@@ -1,0 +1,13 @@
+@mixin btn() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 211px;
+  height: 56px;
+  border-radius: 3px;
+  background: linear-gradient(92.8deg, #21A2D3 -3.74%, #0462AF 100%);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}

@@ -1,0 +1,19 @@
+.custom-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0 !important;
+
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    width: 15px;
+    height: 15px;
+  }
+
+  .swiper-pagination-bullet-active {
+    border-radius: 0;
+    width: 20px;
+    height: 20px;
+    background: #0462AF;
+  }
+}
