@@ -481,18 +481,17 @@ p {
   font-style: italic;
 }
 
-.photos {
-  padding-bottom: 60px;
-}
 .photos h2 {
   margin-bottom: 80px;
   text-align: center;
 }
 .photos .photos-slider {
+  padding-bottom: 60px;
   width: 100%;
   height: 100%;
 }
 .photos .photos-slider .photos-slider__wrapper {
+  position: relative;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -511,35 +510,29 @@ p {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 40%;
-}
-.photos .photos-slider .photos-slider__wrapper .photos-slider__slide.swiper-slide-active {
-  width: 60%;
-}
-.photos .photos-slider .photos-slider__wrapper .photos-slider__slide.swiper-slide-active .slide__img {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.photos .photos-slider .photos-slider__wrapper .photos-slider__slide.swiper-slide-active img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 55.7%;
 }
 .photos .photos-slider .photos-slider__wrapper .photos-slider__slide .slide__img {
   width: 100%;
+  -webkit-transform: scale(0.64);
+      -ms-transform: scale(0.64);
+          transform: scale(0.64);
+  opacity: 0.5;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .photos .photos-slider .photos-slider__wrapper .photos-slider__slide .slide__img img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+.photos .photos-slider .photos-slider__wrapper .photos-slider__slide.swiper-slide-active .slide__img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+.photos .photos-slider .photos-slider__wrapper .photos-slider__slide.swiper-slide-active .slide__img img {
+  display: block;
+  margin-left: auto;
+  width: 100%;
 }

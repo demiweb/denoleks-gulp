@@ -13,13 +13,13 @@ const swiperComments = new Swiper('.comments .swiper', {
 
 const swiperPhotos = new Swiper('.photos .swiper', {
     direction: 'horizontal',
-    // loop: true,
+    loop: true,
     autoplay: {
-        delay: 30000000
+        delay: 3000
     },
     centeredSlides: true,
     slidesPerView: 'auto',
-    spaceBetween: 30,
+    spaceBetween: '-7%',
 
 
     pagination: {
