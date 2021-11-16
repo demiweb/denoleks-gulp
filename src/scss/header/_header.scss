@@ -22,6 +22,35 @@
       }
     }
 
+    .header__burger {
+      display: none;
+      width: 36px;
+      height: 100%;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: calc(50% - 1px);
+        width: 36px;
+        border-bottom: 2px solid $secondary-color;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: calc(50% - 9px);
+          width: 36px;
+          border-bottom: 2px solid $secondary-color;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: calc(50% + 9px);
+          width: 36px;
+          border-bottom: 2px solid $secondary-color;
+        }
+      }
+    }
     .header__menu {
       flex: auto;
       display: flex;
@@ -52,7 +81,7 @@
       }
 
       .btn {
-        @include btn();
+        @include btn(211px);
       }
     }
   }

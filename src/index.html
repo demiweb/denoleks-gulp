@@ -23,7 +23,7 @@
 <main>
     <section class="hero">
         <div class="hero-bg">
-            <img src="./img/hero-bg.png" alt="hero" class="lazyload">
+            <img src="./img/hero-bg.png" alt="hero-bg" class="lazyload">
         </div>
         <div class="container">
             <div class="hero__wrapper">
@@ -58,7 +58,55 @@
                     </p>
                 </div>
                 <div class="about-us__video">
+                    <div class="about-us__popup popup">
+                        <button id="close-about-us-popup">
+                            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.22566 4.81096C5.83514 4.42044 5.20197 4.42044 4.81145 4.81096C4.42092 5.20148 4.42092 5.83465 4.81145 6.22517L10.5862 11.9999L4.81151 17.7746C4.42098 18.1651 4.42098 18.7983 4.81151 19.1888C5.20203 19.5793 5.8352 19.5793 6.22572 19.1888L12.0004 13.4141L17.7751 19.1888C18.1656 19.5793 18.7988 19.5793 19.1893 19.1888C19.5798 18.7983 19.5798 18.1651 19.1893 17.7746L13.4146 11.9999L19.1893 6.22517C19.5799 5.83465 19.5799 5.20148 19.1893 4.81096C18.7988 4.42044 18.1657 4.42044 17.7751 4.81096L12.0004 10.5857L6.22566 4.81096Z"
+                                      fill="black"/>
+                            </svg>
+                        </button>
+                        <iframe width="70%" height="70%" src="https://www.youtube.com/embed/v2H4l9RpkwM"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <button class="btn">
+                        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 7L0.5 13.0622L0.500001 0.937822L11 7Z" fill="white"/>
+                        </svg>
+                    </button>
                     <img src="./img/about-us.png" alt="about-us" class="lazyload">
+                </div>
+                <div class="swiper about-slider">
+
+                    <div class="swiper-wrapper about-slider__wrapper">
+                        <div class="swiper-slide about-slider__slide">
+                            <span>
+                                60+
+                            </span>
+                            <p>
+                                Luxus-Elektroautos zum Mieten in verschiedenen Bundesstaaten und Städten
+                            </p>
+                        </div>
+                        <div class="swiper-slide about-slider__slide">
+                            <span>
+                                1000+
+                            </span>
+                            <p>
+                                Zufriedene Kunden, die regelmäßig zu uns kommen
+                            </p>
+                        </div>
+                        <div class="swiper-slide about-slider__slide">
+                            <span>
+                                14+
+                            </span>
+                            <p>
+                                Mitarbeiter, die Ihnen bei Fragen zur Autovermietung gerne weiterhelfen
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination custom-pagination"></div>
                 </div>
             </div>
         </div>
@@ -117,7 +165,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn">auto bestellen</a>
+                                <a href="#" class="btn" data-radio="Tesla Model S Tri">auto bestellen</a>
                                 <a href="#" class="btn-tag">ab 300€ pro Tag</a>
                             </div>
                         </div>
@@ -175,7 +223,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn">auto bestellen</a>
+                                <a href="#" class="btn" data-radio="Tesla Model S Dual">auto bestellen</a>
                                 <a href="#" class="btn-tag">ab 300€ pro Tag</a>
                             </div>
                         </div>
@@ -233,7 +281,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn">auto bestellen</a>
+                                <a href="#" class="btn" data-radio="Tesla Model X">auto bestellen</a>
                                 <a href="#" class="btn-tag">ab 300€ pro Tag</a>
                             </div>
                         </div>
@@ -290,7 +338,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn">auto bestellen</a>
+                                <a href="#" class="btn" data-radio="Tesla Model Y">auto bestellen</a>
                                 <a href="#" class="btn-tag">ab 300€ pro Tag</a>
                             </div>
                         </div>
@@ -347,7 +395,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn">auto bestellen</a>
+                                <a href="#" class="btn" data-radio="Tesla Model 3">auto bestellen</a>
                                 <a href="#" class="btn-tag">ab 300€ pro Tag</a>
                             </div>
                         </div>
@@ -404,7 +452,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn">auto bestellen</a>
+                                <a href="#" class="btn" data-radio="Tesla Model 3">auto bestellen</a>
                                 <a href="#" class="btn-tag">ab 300€ pro Tag</a>
                             </div>
                         </div>
@@ -461,7 +509,7 @@
                                 </li>
                             </ul>
                             <div>
-                                <a href="#" class="btn">auto bestellen</a>
+                                <a href="#" class="btn" data-radio="BMW i3">auto bestellen</a>
                                 <a href="#" class="btn-tag">ab 300€ pro Tag</a>
                             </div>
                         </div>
@@ -470,6 +518,212 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="popup-prices popup">
+            <div class="popup-prices__wrapper">
+                <h3>
+                    Tesla-Model 3 Standard Plus mit Hinterradantrieb
+                </h3>
+                <table>
+                    <tr>
+                        <th>
+                            Batteriekapazität 52 kWh
+                        </th>
+                        <th>
+                            240 kW/ 325 PS
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            5,6 Sek.
+                        </td>
+
+                        <td>
+                            225 km/h
+                        </td>
+
+                        <td>
+                            448 km.
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            0-100 km/h
+                        </td>
+                        <td>
+                            Höchstgeschwindigkeit
+                        </td>
+                        <td>
+                            Reichweite (WLTP)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                Zeitraum
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                Preis
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                Freikilometer
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1 Tag
+                        </td>
+                        <td>
+                            120 Euro
+                        </td>
+                        <td>
+                            200 km.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Montag-Donnerstag
+                        </td>
+                        <td>
+                            300 Euro
+                        </td>
+                        <td>
+                            600 km.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Freitag-Sonntag
+                        </td>
+                        <td>
+                            300 Euro
+                        </td>
+                        <td>
+                            500 km.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Montag-Sonntag
+                        </td>
+                        <td>
+                            480 Euro
+                        </td>
+                        <td>
+                            800 km.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1 Monat
+                        </td>
+                        <td>
+                            720 Euro
+                        </td>
+                        <td>
+                            2500 km.
+                        </td>
+                    </tr>
+                </table>
+                <a href="#" class="btn">
+                    einreichmen
+                </a>
+            </div>
+        </div>
+        <div class="popup-order popup">
+            <div class="popup-order__wrapper">
+                <h3>
+                    Buchen Sie ein Auto
+                </h3>
+                <form class="order__form">
+                    <label>
+                        <input type="text" placeholder="Name">
+                    </label>
+                    <label>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+                    <div>
+                        <label>
+                            Datum des Erhalts
+                            <input type="date">
+                        </label>
+                        <label>
+                            Rückflugdatum
+                            <input type="date">
+                        </label>
+                    </div>
+                    <label>
+                        <input type="text" placeholder="Zeitpunkt des Empfangs">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Zeit zurück drehen">
+                    </label>
+                    <label></label>
+                    <div>
+                        <label>
+                            <input type="radio" name="car" value="Tesla Model S">
+                            <span>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3.19138L3.85584 6L6.42792 3.50001L9 1.00003" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                            </span>
+                            Tesla Model S
+                        </label>
+                        <label>
+                            <input type="radio" name="car" value="Tesla Model 3">
+                            <span>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3.19138L3.85584 6L6.42792 3.50001L9 1.00003" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                            </span>
+                            Tesla Model 3
+                        </label>
+                        <label>
+                            <input type="radio" name="car" value="Tesla Model Y">
+                            <span>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3.19138L3.85584 6L6.42792 3.50001L9 1.00003" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                            </span>
+                            Tesla Model Y
+                        </label>
+                        <label>
+                            <input type="radio" name="car" value="Tesla Model S">
+                            <span>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3.19138L3.85584 6L6.42792 3.50001L9 1.00003" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                            </span>
+                            Tesla Model S
+                        </label>
+                        <label>
+                            <input type="radio" name="car" value="Tesla Model X">
+                            <span>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3.19138L3.85584 6L6.42792 3.50001L9 1.00003" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                            </span>
+                            Tesla Model X
+                        </label>
+                        <label>
+                            <input type="radio" name="car" value="BMW i3">
+                            <span>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3.19138L3.85584 6L6.42792 3.50001L9 1.00003" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                            </span>
+                            BMW I3
+                        </label>
+                    </div>
+                    <button type="submit">einreichmen</button>
+                </form>
             </div>
         </div>
     </section>
@@ -540,9 +794,9 @@
         <div class="swiper photos-slider">
             <div class="swiper-wrapper photos-slider__wrapper">
                 <div class="swiper-slide photos-slider__slide">
-                   <div class="slide__img">
-                       <img src="./img/photos.png" alt="slide">
-                   </div>
+                    <div class="slide__img">
+                        <img src="./img/photos.png" alt="slide">
+                    </div>
                 </div>
                 <div class="swiper-slide photos-slider__slide">
                     <div class="slide__img">
@@ -558,9 +812,29 @@
             <div class="swiper-pagination custom-pagination"></div>
         </div>
     </section>
-</main>
 
-@@include('./parts/footer.html')
+    <section class="offer">
+        <div class="offer-bg">
+            <img src="img/offer.png" alt="offer-bg" class="lazyload">
+        </div>
+        <div class="container">
+            <div class="offer__wrapper">
+                <div class="offer__text">
+                    <h2>
+                        Sie möchten ein Elektrofahrzeug mieten?
+                    </h2>
+                    <p>
+                        Bitte hinterlassen Sie Ihre Kontaktdaten und wir
+                        Werde dich kontaktieren
+                    </p>
+                    <a href="#" class="btn">
+                        auto bestellen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
