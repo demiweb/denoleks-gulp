@@ -122,86 +122,102 @@
           }
         }
       }
-    }
-  }
 
+      .popup-prices.popup-prices--active {
+        display: block;
 
-  .popup-prices.popup-prices--active {
-    display: block;
+        .popup-prices__wrapper {
+          width: 68%;
+          position: fixed;
+          left: 16%;
+          top: 15%;
+          background: white;
+          box-sizing: border-box;
+          padding: 50px 60px;
+          z-index: 20;
 
-    .popup-prices__wrapper {
-      width: 68%;
-      position: fixed;
-      left: 16%;
-      top: 15%;
-      background: white;
-      box-sizing: border-box;
-      padding: 50px 60px;
-      z-index: 20;
+          .close-popup {
+            position: absolute;
+            right: 3%;
+            top: 3%;
+            width: 50px;
+            height: 50px;
 
-      h3 {
-        text-align: center;
-        margin-bottom: 33px;
-        color: #4A4A49;
-      }
-
-      table {
-        border-collapse: collapse;
-        border: 1px solid #C4C4C4;
-        width: 100%;
-        margin-bottom: 30px;
-
-        tr {
-          display: flex;
-          border: 1px solid #C4C4C4;
-
-          th {
-            display: flex;
-            justify-content: center;
-            border-left: 1px solid #C4C4C4;
-            border-right: 1px solid #C4C4C4;
-            width: 50%;
-            font-weight: 600;
-            padding: 15px;
-
-            &:first-child {
-              border-left: none;
+            &:hover {
+              cursor: pointer;
             }
 
-            &:last-child {
-              border-right: none;
+            path {
+              fill: black;
             }
           }
 
-          td {
-            display: flex;
-            justify-content: center;
-            border-left: 1px solid #C4C4C4;
-            border-right: 1px solid #C4C4C4;
-            width: 33.33333%;
-            padding: 7px;
+          h3 {
+            text-align: center;
+            margin-bottom: 33px;
+            color: #4A4A49;
+          }
 
-            &:first-child {
-              border-left: none;
-            }
+          table {
+            border-collapse: collapse;
+            border: 1px solid #C4C4C4;
+            width: 100%;
+            margin-bottom: 30px;
 
-            &:last-child {
-              border-right: none;
-            }
+            tr {
+              display: flex;
+              border: 1px solid #C4C4C4;
 
-            span {
-              font-weight: 600;
-              color: $secondary-color;
+              th {
+                display: flex;
+                justify-content: center;
+                border-left: 1px solid #C4C4C4;
+                border-right: 1px solid #C4C4C4;
+                width: 50%;
+                font-weight: 600;
+                padding: 15px;
+
+                &:first-child {
+                  border-left: none;
+                }
+
+                &:last-child {
+                  border-right: none;
+                }
+              }
+
+              td {
+                display: flex;
+                justify-content: center;
+                border-left: 1px solid #C4C4C4;
+                border-right: 1px solid #C4C4C4;
+                width: 33.33333%;
+                padding: 7px;
+
+                &:first-child {
+                  border-left: none;
+                }
+
+                &:last-child {
+                  border-right: none;
+                }
+
+                span {
+                  font-weight: 600;
+                  color: $secondary-color;
+                }
+              }
             }
           }
         }
+
+        .btn {
+          @include btn(100%)
+        }
       }
     }
-
-    .btn {
-      @include btn(100%)
-    }
   }
+
 
   .popup-order.popup-order--active {
     display: block;
@@ -215,6 +231,22 @@
       box-sizing: border-box;
       padding: 43px 65px 51px;
       z-index: 20;
+
+      .close-popup {
+        position: absolute;
+        right: 3%;
+        top: 3%;
+        width: 50px;
+        height: 50px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        path {
+          fill: black;
+        }
+      }
 
       h3 {
         text-align: center;

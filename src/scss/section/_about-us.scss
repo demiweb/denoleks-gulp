@@ -31,11 +31,10 @@
 
         .btn {
           cursor: pointer;
-          backdrop-filter: blur(0);
-          box-shadow: 1px 0 10px white,
-          0 1px 10px white,
-          -1px 0 10px white,
-          0 -1px 10px white;
+          background: rgba(255, 255, 255, 0.4);
+          box-shadow: 0 4px 12px rgba(39, 39, 39, 0.05),
+          inset 0 3px 6px rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(4px);
         }
 
         svg {
@@ -50,22 +49,15 @@
       .about-us__popup.about-us__popup--visible {
         display: block;
 
-        #close-about-us-popup {
-          position: fixed;
-          right: 5%;
-          top: 5%;
-          background: transparent;
-          border: none;
+        .close-popup {
+          position: absolute;
+          right: 3%;
+          top: 3%;
+          width: 50px;
+          height: 50px;
 
-          svg {
-            path {
-              stroke: white;
-              fill: white;
-            }
-          }
-
-          &:hover {
-            cursor: pointer;
+          path {
+            fill: white;
           }
         }
 

@@ -1,4 +1,4 @@
-const swiperComments = new Swiper('.comments .swiper', {
+let swiperComments = new Swiper('.comments .swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -11,7 +11,7 @@ const swiperComments = new Swiper('.comments .swiper', {
     },
 });
 
-const swiperPhotos = new Swiper('.photos .swiper', {
+let swiperPhotos = new Swiper('.photos .swiper', {
     direction: 'horizontal',
     loop: true,
     autoplay: {
@@ -38,7 +38,7 @@ const swiperPhotos = new Swiper('.photos .swiper', {
     },
 });
 
-const swiperAbout = new Swiper('.about-us .swiper', {
+let swiperAbout = new Swiper('.about-us .swiper', {
     direction: 'horizontal',
 
     breakpoints: {
@@ -58,7 +58,7 @@ const swiperAbout = new Swiper('.about-us .swiper', {
 
 const burger = document.querySelector('.header__burger')
 
-burger.addEventListener('click', function (e) {
+burger.addEventListener('click', function () {
     this.classList.toggle('header__burger--active')
 })
 
@@ -68,7 +68,7 @@ if (!aboutUsVideo.length) {
 
 } else {
     const aboutUsPopup = document.querySelector('.about-us__popup')
-    const closeAboutUsPopup = document.querySelector('#close-about-us-popup')
+    const close = document.querySelector('.about-us__popup .close-popup')
 
     aboutUsVideo.forEach(elem => {
         elem.addEventListener('click', function () {
@@ -76,7 +76,7 @@ if (!aboutUsVideo.length) {
         })
     })
 
-    closeAboutUsPopup.addEventListener('click', function (e) {
+    close.addEventListener('click', function (e) {
         e.stopPropagation()
         aboutUsPopup.classList.remove('about-us__popup--visible')
     })
@@ -92,20 +92,43 @@ const btnTag = [...document.querySelectorAll('.btn-tag')]
 if (!btnTag.length) {
 
 } else {
-    const popUpPrices = document.querySelector('.popup-prices')
+    const popUpPrices = [...document.querySelectorAll('.popup-prices')]
+    const body = document.querySelector('body')
+    const close = document.querySelectorAll('.popup-prices .close-popup')
 
-    btnTag.forEach(elem => {
+    btnTag.forEach((elem, index) => {
         elem.addEventListener('click', function (e) {
             e.preventDefault()
-            popUpPrices.classList.add('popup-prices--active')
+            popUpPrices.forEach((el, idx) => {
+                if (index === idx) {
+                    el.classList.add('popup-prices--active')
+                    body.classList.add('noscroll')
+                }
+            })
         })
     })
 
-    popUpPrices.addEventListener('click', function (e) {
-        const item = e.target
-        if (item.classList.contains('popup-prices--active')) {
-            this.classList.remove('popup-prices--active')
-        }
+    popUpPrices.forEach(elem => {
+        elem.addEventListener('click', function (e) {
+            const item = e.target
+
+            if (item.classList.contains('popup-prices--active')) {
+                this.classList.remove('popup-prices--active')
+                body.classList.remove('noscroll')
+            }
+        })
+    })
+
+    close.forEach((elem, index) => {
+        elem.addEventListener('click', function () {
+            popUpPrices.forEach((el, idx) => {
+                if (index === idx) {
+                    el.classList.remove('popup-prices--active')
+                    body.classList.remove('noscroll')
+                }
+
+            })
+        })
     })
 }
 
@@ -116,16 +139,20 @@ if (!orderCar.length) {
 } else {
     const popUpOrder = document.querySelector('.popup-order')
     const carRadioBtn = [...document.querySelectorAll('.order__form input[type=radio]')]
+    const body = document.querySelector('body')
+    const close = document.querySelector('.popup-order .close-popup')
 
     orderCar.forEach(elem => {
         elem.addEventListener('click', function (e) {
             e.preventDefault()
-            popUpOrder.classList.add('popup-order--active')
-
             const item = this
+
+            popUpOrder.classList.add('popup-order--active')
+            body.classList.add('noscroll')
+
             carRadioBtn.forEach(elem => {
                 if (elem.value === item.dataset.radio) {
-                   elem.checked = true
+                    elem.checked = true
                 }
             })
         })
@@ -135,7 +162,13 @@ if (!orderCar.length) {
         const item = e.target
         if (item.classList.contains('popup-order--active')) {
             this.classList.remove('popup-order--active')
+            body.classList.remove('noscroll')
         }
+    })
+
+    close.addEventListener('click', function () {
+        popUpOrder.classList.remove('popup-order--active')
+        body.classList.remove('noscroll')
     })
 }
 
